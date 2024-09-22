@@ -1,38 +1,84 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #FFFDE7;/* Light beige */
   min-height: 100vh;
+}
+
+
+.board{
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.circleGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(10, 50px);
+  border: 2px solid black;
+  width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resultList{
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  width: 200px;
+}
+
+.colorbuttonlist{
+  display: grid;
+  grid-template-columns: repeat(6, 41.66px);
+  border: 2px solid black;
+}
+
+.colorbutton{
+  height: 41.66px;
+  border-radius: 50%;
+}
+
+.resultGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 25px);
+  grid-template-rows: repeat(2, 25px);
+}
+
+.resultGridColumn{
+  border: 2px solid black;
+}
+
+.gridrow{
+  display: flex;
+}
+
+.gameResult{
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Full viewport height to center items vertically */
+  width: 100vw; /* Full viewport width to center items horizontally */
+}
+
+.button {
+  background-color: #4CAF50; /* Green background */
+  margin-top: 10px;
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as an inline-block */
+  font-size: 16px; /* Set font size */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.button:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slight button press effect */
 }
